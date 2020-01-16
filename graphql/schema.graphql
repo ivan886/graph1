@@ -18,10 +18,9 @@ type Query {
 
 type Mutation {
    
-   createSite( name: String!
-               description: String!
-               lat:Float!
-              lon:Float!): Site @create
+   createSite( name: String
+               description: String
+               ): Site @create
 
    deleteSite(id: ID!): Site @delete
    updateSite( id: ID!
@@ -45,21 +44,8 @@ type User {
 
 type Site {
     id: ID!
-    name: String!
-    description: String!
-    lat:Float!
-    lon:Float!
-    files: [File!]! @hasMany
+    name: String
+    description: String
  }
 
 
-
-type File {
-    id: ID!
-    site_id: Int!
-    treasure_id: Int!
-    name: String!
-    type:String
-    drive_id:String!
-
-}

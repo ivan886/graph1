@@ -7,19 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Site extends Model
 {   protected  $table= 'sites';
     protected $primaryKey = 'id';
-    public $timestamps = false;
+    public    $timestamps = false;
     protected $fillable = [
         'name',
-        'description',
-        'lat',
-        'lon'
+        'description'        
 
     ];
-
-    public function files()
-    { return $this->hasMany('App\File');
-    }
-
 
 
 }
